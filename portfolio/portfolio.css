@@ -1,0 +1,171 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+#header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+#header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+#header nav ul li {
+    margin-right: 20px;
+}
+
+#header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* About Section Styles */
+#about {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.about-col-2 {
+    flex: 1;
+}
+
+.tab-links {
+    cursor: pointer;
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+/* Services Section Styles */
+#services {
+    padding: 50px 0;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.services-list div {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.services-list div h2 {
+    margin-bottom: 10px;
+}
+
+/* Portfolio Section Styles */
+#portfolio {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.work {
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.work:hover .layer {
+    opacity: 1;
+}
+
+.layer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.layer p {
+    font-size: 16px;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.contact-left,
+.contact-right {
+    flex-basis: 50%;
+}
+
+.contact-right form input,
+.contact-right form textarea,
+.contact-right form button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.contact-right form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-right form button:hover {
+    background-color: #555;
+}
